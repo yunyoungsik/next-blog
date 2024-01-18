@@ -10,9 +10,9 @@
         justify-content: space-between;
         position: relative;
         .f_nav {
-            ul {
+            >ul {
                 display: flex;
-                li {
+                >li {
                     margin: 0 10px;
                     font-size: 0.8rem;
                     font-family: var(--font-nanum);
@@ -25,16 +25,18 @@
             }
         }
         .f_logo {
-            font-size: 1rem;
-            font-family: var(--font-nanum);
-            font-weight: 700;
-            color: var(--white);
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            span {
-                color: var(--gray);
+            >a {
+                font-size: 1rem;
+                font-family: var(--font-nanum);
+                font-weight: 700;
+                color: var(--white);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                >span {
+                    color: var(--gray);
+                }
             }
         }
     

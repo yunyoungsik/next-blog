@@ -1,7 +1,6 @@
 #header {
     width: 100%;
     height: 100px;
-    padding: 0 50px;
     background-color: var(--black);
     .header__inner {
         width: 100%;
@@ -11,24 +10,26 @@
         align-items: center;
         justify-content: space-between;
         .logo {
-            font-size: 2rem;
-            font-family: var(--font-nanum);
-            font-weight: 700;
-            text-align: center;
-            color: var(--white);
-            position: relative;
-            &::before {
-                position: absolute;
-                top: 50%;
-                right: -20px;
-                transform: translate(-50%, -50%);
-                content: '';
-                width: 1px;
-                height: 30px;
-                background-color: rgba(255,255,255,0.15);
-            }
-        span {
-                color: var(--gray);
+            >a {
+                font-size: 2rem;
+                font-family: var(--font-nanum);
+                font-weight: 700;
+                text-align: center;
+                color: var(--white);
+                position: relative;
+                &::before {
+                    position: absolute;
+                    top: 50%;
+                    right: -90px;
+                    transform: translate(-50%, -50%);
+                    content: '';
+                    width: 1px;
+                    height: 30px;
+                    background-color: rgba(255,255,255,0.15);
+                }
+            >span {
+                    color: var(--gray);
+                }
             }
         }
     .nav {
@@ -36,11 +37,11 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            ul {
+            >ul {
                 display: flex;
-                li {
+                >li {
                     padding: 0 10px;
-                    a {
+                    >a {
                         font-size: 1rem;
                         font-family: var(--font-nanum);
                         color: var(--gray);
@@ -56,29 +57,11 @@
     .header__btn {
             display: flex;
             .profill{
-                width: 30px;
-                height: 30px;
-                background-color: var(--gray);
-                border-radius: 50%;
-                margin-right: 20px;
-            }
-        .login {
-                margin-left: 20px;
-                font-size: 0.8rem;
-                font-family: var(--font-nanum);
-                font-weight: 700;
-                color: var(--black);
-                text-transform: uppercase;
-                padding: 5px 20px;
-                background-color: var(--white);
-                border-radius: 20px;
-                cursor: pointer;
-                transition: all 0.3s;
                 position: relative;
                 &::before {
                     position: absolute;
                     top: 50%;
-                    left: -20px;
+                    right: -5px;
                     transform: translate(-50%, -50%);
                     content: '';
                     width: 1px;
@@ -86,6 +69,32 @@
                     background-color: rgba(255,255,255,0.15);
                     cursor: default;
                 }
+               .img {
+                width: 30px;
+                height: 30px;
+                background-color: var(--gray);
+                border-radius: 50%;
+                margin-right: 20px;
+                overflow: hidden;
+                >img {
+                    object-fit: contain;
+                }
+               }
+            }
+        .join,
+        .login {
+                margin-left: 20px;
+                font-size: 0.8rem;
+                font-family: var(--font-nanum);
+                font-weight: 900;
+                line-height: 1.5;
+                color: var(--black);
+                text-transform: uppercase;
+                padding: 5px 20px;
+                background-color: var(--white);
+                border-radius: 20px;
+                cursor: pointer;
+                transition: all 0.3s;
                 &:hover{
                     color: var(--white);
                     background-color: var(--blue);

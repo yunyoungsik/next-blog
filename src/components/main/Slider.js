@@ -1,19 +1,15 @@
 import Link from 'next/link'
 
-export default function Slider(){
+export default function Slider2(){
     return(
         <div className="m_slider">
             <div className="slider">
-                <div className="m_slider__top">
-                    <h2>
-                       Blog
-                    </h2>
-                    <div className="icon">
-    
-                    </div>
-                </div>
+                <h2>
+                    Slider Title
+                </h2>
+                    
                 <p>
-                    내용이 들어갈 자리
+                    Slider Content
                 </p>
             </div>
         </div>
