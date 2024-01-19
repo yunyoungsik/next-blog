@@ -61,6 +61,10 @@
         >form {
             display: flex;
             align-items: center;
+            @media(max-width: 1000px){
+                align-items: flex-start;
+                flex-direction: column-reverse;
+            }
             .search {
                 border: 0;
                 >div {
@@ -73,6 +77,9 @@
                         padding: 25px 25px 25px 50px;
                         &:focus {
                             outline: 3px solid rgba(255,255,255,0.15);
+                        }
+                        @media(max-width: 420px) {
+                            width: 100%;
                         }
                     }
                     >button {
@@ -92,7 +99,10 @@
 
             .cate {
                 border: 0;
-                >button {
+                @media(max-width: 1000px) {
+                    margin-bottom: 10px;
+                }
+                button {
                     padding: 10px 25px;
                     border-radius: 25px;
                     color: var(--gray);
@@ -100,9 +110,15 @@
                     margin-left: 1rem;
                     cursor: pointer;
                     transition: all 0.3s;
+                    
                     &.active {
                         color: var(--white);
                         background-color: var(--blue);
+                    }
+                    @media(max-width: 1000px) {
+                        &:first-of-type {
+                            margin-left: 0;
+                        }
                     }
                 }
             }
