@@ -2,7 +2,7 @@ import '../assets/sass/style.scss'
 
 import Header from '../components/layout/Header.js'
 import Footer from '../components/layout/Footer.js'
-import ColorMode from '@/components/layout/ColorMode'
+// import ColorMode from '@/components/layout/ColorMode'
 
 export const metadata = {
   title: 'Create Next App',
@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
       <body>
         <Header />
         {children}
-        <ColorMode />
+        {/* <ColorMode /> */}
         <Footer />
       </body>
     </html>

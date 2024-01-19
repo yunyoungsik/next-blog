@@ -9,7 +9,7 @@ export default function ColorMode() {
 
     return (
         <div className="colorMode">
-            <div href="/" class="button white">
+            <div href="/" className="button white">
                 LIGHT
             </div>
         </div>
