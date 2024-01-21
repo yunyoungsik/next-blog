@@ -1,7 +1,8 @@
-'use client';
-
+'use client'
 import Link from 'next/link';
 import { useState } from 'react';
+
+import { link, mLink } from '@/utils/link';
 
 export default function Header() {
   const [show, setShow] = useState(false);
@@ -19,17 +20,23 @@ export default function Header() {
         </h1>
         <nav className={`nav ${show ? "show" : "desktop"}`} role="navigation" aria-label="메인 메뉴">
           <ul>
-            <li>
-              <Link className="active" href="/">
-                HOME
-              </Link>
-            </li>
-            <li>
-              <Link href="#">NOTICE</Link>
-            </li>
-            <li>
-              <Link href="#">ABOUT</Link>
-            </li>
+            {link.map((link) => (
+              <li key={link.title}>
+                <Link href={link.href}>
+                  {link.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          <ul className={`m_menu ${show ? "show" : ""}`}>
+            {mLink.map((link) => (
+              <li key={link.title}>
+                <Link href={link.href}>
+                  {link.title}
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
         <div

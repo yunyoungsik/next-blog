@@ -1,26 +1,20 @@
 import Link from 'next/link'
 
+import { link } from '@/utils/link'
+
 export default function Footer(){
     return(
         <footer id="footer">
             <div className="footer__inner container">
                <nav className="f_nav">
                    <ul>
-                       <li>
-                           <Link href="/">
-                               HOME
-                           </Link>
-                       </li>
-                       <li>
-                           <Link href="/">
-                               NOTICE
-                           </Link>
-                       </li>
-                       <li>
-                           <Link href="/">
-                               ABOUT
-                           </Link>
-                       </li>
+                        {link.map((link) => (
+                            <li key={link.title}>
+                                <Link href={link.href}>
+                                    {link.title}
+                                </Link>
+                            </li>
+                        ))}
                    </ul>
                </nav>
                <h2 className="f_logo">

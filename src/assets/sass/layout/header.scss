@@ -59,7 +59,17 @@
               font-weight: 900;
               color: var(--white);
             }
+            &:hover {
+              text-decoration: underline;
+              text-underline-position: under;
+            }
           }
+        }
+      }
+      .m_menu {
+        display: none;
+        &.show {
+          display: block;
         }
       }
       @media (max-width: 749px) {
